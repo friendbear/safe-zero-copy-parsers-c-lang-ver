@@ -32,6 +32,19 @@ int main(void) {
   // Print payload content
   printf("%s\n", parsed_data.payload);
 
+ // Print payload content
+  printf("Original: %s\n", parsed_data.payload);
+
+  // Tamper with the original buffer
+  buffer[1] = 'j';
+
+  // Print payload content
+  printf("Tampered: %s\n", parsed_data.payload);
+
+
+  // Print payload content
+  printf("Freed: %s\n", parsed_data.payload);
+
   free(buffer);
 
   return 0;
